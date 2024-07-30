@@ -1,7 +1,17 @@
+import { SignedIn, SignedOut } from "@clerk/nextjs";
+import SignInPage from "./auth/page";
+
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      Hello world!
-    </main>
+    <>
+      <SignedIn>
+        <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
+          Hello world!
+        </main>
+      </SignedIn>
+      <SignedOut>
+        <SignInPage />
+      </SignedOut>
+    </>
   );
 }

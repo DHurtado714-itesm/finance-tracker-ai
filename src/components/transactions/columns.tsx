@@ -2,6 +2,7 @@
 
 "use client";
 
+import { Prisma } from "@prisma/client";
 import { ColumnDef } from "@tanstack/react-table";
 
 // This type is used to define the shape of our data.
@@ -27,6 +28,5 @@ export const columns: ColumnDef<Payment>[] = [
     header: "Amount",
   },
 ];
-
 
 
